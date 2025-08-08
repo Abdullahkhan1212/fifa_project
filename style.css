@@ -1,96 +1,114 @@
-.images{
-    height: 70PX;
+/* -------------------- GENERAL -------------------- */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------- HEADER -------------------- */
+.images {
+    height: 70px;
     background-color: black;
     color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* gap: 30px; */
-}
-body{
-    margin: 0px;
-    padding: 0%;
-}
-.sub-imges{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: small ; 
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    padding: 5px;
+    gap: 10px;
 }
 
-nav{
-    height: 70px;    
+.sub-imges {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: small;
+    flex-wrap: wrap;
+}
+
+/* -------------------- NAV -------------------- */
+nav {
+    height: auto; /* let it grow on mobile */
     background-color: dodgerblue;
     position: sticky;
-    top:0;
+    top: 0;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
     align-items: center;
     color: white;
     z-index: 1000;
-    
+    padding: 10px;
+    text-align: center;
 }
-nav h1{
-    font-size: large;
+
+nav h1 {
+    font-size: 1rem;
+    margin: 5px 0;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
     border: 2px solid white;
-    border-radius:50px ;
-    font-size: medium ; 
+    border-radius: 50px;
+    font-size: medium;
     font-family: 'Courier New', Courier, monospace;
-    padding: 5px;
+    padding: 5px 10px;
 }
-h1:hover{
-    color: aquas;
-}
-a:hover{
+
+a:hover {
     color: blue;
     border-color: green;
 }
-.last{
-    height: 90px;
-    background-color: darkblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.last img{
-    border-radius: 50%;
-    height: 80%;
-    object-fit: cover;
-    border: 4px solid green;
 
-    
-}
-.last img:hover{
-    border-color: red;
-}
-.last h1{
-    color: white;
-}
-h1:hover{
+h1:hover {
     color: aqua;
 }
 
+/* -------------------- LAST ROW IMAGES -------------------- */
+.last {
+    height: auto;
+    background-color: darkblue;
+    display: flex;
+    flex-wrap: wrap; /* wrap for smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
 
-.btn{
+.last img {
+    border-radius: 50%;
+    height: 60px;
+    object-fit: cover;
+    border: 4px solid green;
+}
+
+.last img:hover {
+    border-color: red;
+}
+
+.last h1 {
+    color: white;
+}
+
+/* -------------------- BUTTON OVERLAY -------------------- */
+.btn {
     font-size: large;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border-radius: 30px;
     padding: 10px;
     border: 2px solid blue;
-    position: absolute;
-    top: 420px;
-    left: 250px;
     background-color: blue;
     color: white;
     margin: 0;
+    position: absolute;
+    top: 420px;
+    left: 250px;
 }
-.btn-text{
+
+.btn-text {
     font-size: xx-large;
     font-family: sans-serif;
     position: absolute;
@@ -100,14 +118,17 @@ h1:hover{
     font-weight: bolder;
     margin: 0;
 }
-.btn-text:hover{
-    color:white;
+
+.btn-text:hover {
+    color: white;
 }
-.btn:hover{
-    color:black;
+
+.btn:hover {
+    color: black;
     border-color: red;
 }
 
+/* -------------------- CAROUSEL -------------------- */
 .carousel-item {
     position: relative;
 }
@@ -117,10 +138,10 @@ h1:hover{
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%; /* shadow width */
+    width: 40%;
     height: 100%;
     background: linear-gradient(to right, rgba(0,0,0,0.9), transparent);
-    pointer-events: none; /* so it doesn’t block clicks */
+    pointer-events: none;
     z-index: 1;
 }
 
@@ -128,45 +149,126 @@ h1:hover{
     display: block;
     width: 100%;
 }
- 
-.cards1{
-    height: 270px;
+
+/* -------------------- CARDS -------------------- */
+.cards1 {
     background-color: white;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap; /* responsive wrapping */
     justify-content: center;
-    gap: 100px;
-    align-items: center;
-} 
- .heading{
-    margin-top:30px;
-    margin-left: 340px;
-    height: 50px;
-
+    gap: 20px;
+    padding: 20px;
 }
 
-.cards1 div{
+.cards1 div {
+    flex: 1 1 200px;
+    max-width: 250px;
     height: 250px;
-    width: 250px;
     background-color: blue;
     border-radius: 20px;
-}
-.card-btn{
-    margin-top: 13px;
-    margin-left: 1600px;
-    border-radius: 20px;
-    padding: 10px;
-    border: 2px solid yellow;
-}
-.card-btn:hover{
-    border-color:green;
-    color: white;
-    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.cards1 img {
+    max-width: 80%;
+    max-height: 80%;
+}
 
+/* -------------------- MEDIA QUERIES -------------------- */
+@media (max-width: 1100px) {
+    .btn {
+        position: absolute;
+        top:150px ;
+        left: 10%;
+    }
 
+    .btn-text {
+        position: absolute;
+        top: 80px;
+        left: 10%;
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 992px) {
+    .btn {
+        position: absolute;
+        top:150px ;
+        left: 10%;
+    }
 
+    .btn-text {
+        position: absolute;
+        top: 80px;
+        left: 10%;
+        font-size: 1.5rem;
+    }
+}
 
+@media (max-width: 768px) {
+    nav {
+        flex-direction:row
+        gap: 10px;
+    }
 
+    nav h1 {
+        font-size: 0.9rem;
+    }
+
+    .last img {
+        height: 50px;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 5px 10px;
+        position: absolute;
+        top: 150px
+    }
+
+    .btn-text {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 90px
+    }
+}
+
+@media (max-width: 576px) {
+    .images {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .sub-imges {
+        justify-content: center;
+    }
+
+    .btn,
+    .btn-text {
+        position: static; /* no overlap for very small screens */
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .btn-text {
+        font-size: 1rem;
+    }
+
+    .cards1 div {
+        height: 200px;
+    }
+}
+    
+@media (max-width: 344px) {
+    .last {
+        display: flex;               /* make sure flex is active */
+        flex-direction: row;         /* stay in a row */
+        justify-content: center;     /* center horizontally */
+        align-items: center;         /* center vertically */
+        text-align: center;          /* center text */
+        gap: 5px;                     /* small space between items */
+    }
+}
 
