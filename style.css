@@ -2,6 +2,12 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* -------------------- HEADER -------------------- */
@@ -157,27 +163,107 @@ h1:hover {
     flex-wrap: wrap; /* responsive wrapping */
     justify-content: center;
     gap: 20px;
+    height: 400px;
     padding: 20px;
 }
 
-.cards1 div {
-    flex: 1 1 200px;
-    max-width: 250px;
-    height: 250px;
-    background-color: blue;
+
+
+.card {
+    width: 300px;
+    background: linear-gradient(to right, #002f7b, #001646);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+   
+
+
+  .tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  .time {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+
+  h2 {
+    margin: 5px 0 15px;
+  }
+  .for-sp{
+    word-spacing: 50px;
+  }
+
+  .btn-card {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+  }
+
+  .btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+ .heading{
+    position: relative;
+    left: 17%;
+    top: 15px;
+ }
+ .btn-see button{
+    position: absolute;
+    top: 105%;
+    right: 10%;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid green;
+      z-index: 100;
+ }
+.btn-see button:hover {
+    border: 2px solid blue !important;
+    color: green !important;
+    background-color: red !important;
+} 
+.card-6 {
+  background-color: dodgerblue;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.cards1 img {
-    max-width: 80%;
-    max-height: 80%;
+.card-6-heading {
+  width: 100%; /* makes it take the full row at top */
+  font-size: 2rem;
+  color: white;
+  margin: 0 0 10px 0; /* spacing below heading */
+  position: relative;
+  left: 180px;
+   pointer-events: none; 
 }
+
+.card-6 div img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 
 /* -------------------- MEDIA QUERIES -------------------- */
-@media (max-width: 1100px) {
+ @media (max-width: 1100px) {
     .btn {
         position: absolute;
         top:150px ;
@@ -271,4 +357,4 @@ h1:hover {
         gap: 5px;                     /* small space between items */
     }
 }
-
+ 
