@@ -9,6 +9,19 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn, .btn-text, .btn-see button, .card-6-heading {
+    max-width: 100%; 
+}
+
 
 /* -------------------- HEADER -------------------- */
 .images {
@@ -43,7 +56,7 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     color: white;
-    z-index: 1000;
+    z-index: 999; /* ensure it stays on top */
     padding: 10px;
     text-align: center;
 }
@@ -110,23 +123,27 @@ h1:hover {
     color: white;
     margin: 0;
     position: absolute;
-    top: 420px;
+    top: 75%;
     left: 250px;
+    width: 200px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
 }
 
 .btn-text {
     font-size: xx-large;
     font-family: sans-serif;
     position: absolute;
-    top: 310px;
+    top: 60%;
     left: 250px;
-    color: black;
+    color:green;
     font-weight: bolder;
     margin: 0;
 }
 
 .btn-text:hover {
-    color: white;
+    color: black;
 }
 
 .btn:hover {
@@ -217,23 +234,24 @@ h1:hover {
   }
  .heading{
     position: relative;
-    left: 17%;
+    left: 10%;
     top: 15px;
+    pointer-events: none;
  }
  .btn-see button{
     position: absolute;
-    top: 105%;
-    right: 10%;
+    top: 115%;
+    right: 6%;
     border-radius: 30px;
     padding: 10px;
-    cursor: pointer;
     border: 2px solid green;
-      z-index: 100;
+      /* z-index: 100; */
  }
 .btn-see button:hover {
-    border: 2px solid blue !important;
+    border-color:red !important;
     color: green !important;
-    background-color: red !important;
+    background-color:dodgerblue !important;
+    color: white !important;
 } 
 .card-6 {
   background-color: dodgerblue;
@@ -250,7 +268,7 @@ h1:hover {
   color: white;
   margin: 0 0 10px 0; /* spacing below heading */
   position: relative;
-  left: 180px;
+  left: 100px;
    pointer-events: none; 
 }
 
@@ -357,4 +375,68 @@ h1:hover {
         gap: 5px;                     /* small space between items */
     }
 }
+
+
+
+@media (max-width: 992px) {
+    .card {
+        width: 45%; /* two per row */
+    }
+}
+
+/* Large mobile */
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* one per row */
+    }
+    .heading {
+        left: 0;
+        text-align: center;
+    }
+    .btn-see {
+        position: relative; /* make absolute positioning relative to container */
+        text-align: center; /* center button */
+    }
+    .btn-see button {
+        position: relative; /* still allows offsets inside container */
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+}
+
+/* Small mobile */
+@media (max-width: 576px) {
+    .card {
+        width: 100%; /* full width */
+    }
+    /* .btn-see button {
+        position: static; /* remove absolute */
+        display: block;
+        margin: 10px auto;
+    } */
+    .tag img {
+        width: 20px; /* shrink logos */
+        height: auto;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+}
  
+@media (max-width: 344px) {
+    .btn {
+        width: 80%; /* make button wider */
+        left: 10%; /* center it */
+    }
+    .btn-text {
+        left: 10%;
+        font-size: 1.2rem; /* larger text for readability */
+    }
+    .last img {
+        height: 40px; /* smaller images */
+    }
+}
