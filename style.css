@@ -4,13 +4,15 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    overflow-x: hidden; /* prevent horizontal scroll */
+
+html,body {
+    overflow-x: hidden;
 }
 
 img {
@@ -18,8 +20,11 @@ img {
     height: auto;
 }
 
-.btn, .btn-text, .btn-see button, .card-6-heading {
-    max-width: 100%; 
+.btn,
+.btn-text,
+.btn-see button,
+.card-6-heading {
+    max-width: 100%;
 }
 
 
@@ -31,7 +36,8 @@ img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap; /* allow wrapping on small screens */
+    flex-wrap: wrap;
+    /* allow wrapping on small screens */
     padding: 5px;
     gap: 10px;
 }
@@ -46,7 +52,8 @@ img {
 
 /* -------------------- NAV -------------------- */
 nav {
-    height: auto; /* let it grow on mobile */
+    height: auto;
+    /* let it grow on mobile */
     background-color: dodgerblue;
     position: sticky;
     top: 0;
@@ -56,7 +63,8 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     color: white;
-    z-index: 999; /* ensure it stays on top */
+    z-index: 999;
+    /* ensure it stays on top */
     padding: 10px;
     text-align: center;
 }
@@ -90,7 +98,8 @@ h1:hover {
     height: auto;
     background-color: darkblue;
     display: flex;
-    flex-wrap: wrap; /* wrap for smaller screens */
+    flex-wrap: wrap;
+    /* wrap for smaller screens */
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -137,7 +146,7 @@ h1:hover {
     position: absolute;
     top: 60%;
     left: 250px;
-    color:green;
+    color: green;
     font-weight: bolder;
     margin: 0;
 }
@@ -163,7 +172,7 @@ h1:hover {
     left: 0;
     width: 40%;
     height: 100%;
-    background: linear-gradient(to right, rgba(0,0,0,0.9), transparent);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
     pointer-events: none;
     z-index: 1;
 }
@@ -177,7 +186,8 @@ h1:hover {
 .cards1 {
     background-color: white;
     display: flex;
-    flex-wrap: wrap; /* responsive wrapping */
+    flex-wrap: wrap;
+    /* responsive wrapping */
     justify-content: center;
     gap: 20px;
     height: 400px;
@@ -193,32 +203,33 @@ h1:hover {
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-   
+}
 
 
-  .tag {
+
+.tag {
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 20px;
     font-size: 0.8rem;
     margin-bottom: 10px;
-  }
+}
 
-  .time {
+.time {
     font-size: 0.9rem;
     color: #ccc;
-  }
+}
 
-  h2 {
+h2 {
     margin: 5px 0 15px;
-  }
-  .for-sp{
-    word-spacing: 50px;
-  }
+}
 
-  .btn-card {
+.for-sp {
+    word-spacing: 50px;
+}
+
+.btn-card {
     display: inline-block;
     padding: 8px 15px;
     border: 1px solid white;
@@ -227,64 +238,117 @@ h1:hover {
     text-decoration: none;
     font-size: 0.9rem;
     transition: background 0.3s;
-  }
+}
 
-  .btn:hover {
+.btn:hover {
     background: rgba(255, 255, 255, 0.2);
-  }
- .heading{
+}
+
+.heading {
     position: relative;
     left: 10%;
     top: 15px;
     pointer-events: none;
- }
- .btn-see button{
+}
+
+.btn-see button {
     position: absolute;
     top: 115%;
     right: 6%;
     border-radius: 30px;
     padding: 10px;
     border: 2px solid green;
-      /* z-index: 100; */
- }
+    /* z-index: 100; */
+}
+
 .btn-see button:hover {
-    border-color:red !important;
+    border-color: red !important;
     color: green !important;
-    background-color:dodgerblue !important;
+    background-color: dodgerblue !important;
     color: white !important;
-} 
+}
+
 .card-6 {
-  background-color: dodgerblue;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+    background-color: dodgerblue;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .card-6-heading {
-  width: 100%; /* makes it take the full row at top */
-  font-size: 2rem;
-  color: white;
-  margin: 0 0 10px 0; /* spacing below heading */
-  position: relative;
-  left: 100px;
-   pointer-events: none; 
+    width: 100%;
+    /* makes it take the full row at top */
+    font-size: 2rem;
+    color: white;
+    margin: 0 0 10px 0;
+    /* spacing below heading */
+    position: relative;
+    left: 100px;
+    pointer-events: none;
 }
 
 .card-6 div img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.title {
+    position: relative;
+    bottom: 100px;
+    color: white;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.contain {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  border-radius: 10px;
+  
+
+  /* Gradient background sampled from your screenshot */
+  background: linear-gradient(135deg, #0d1234 0%, #152a64 40%, #1d4da3 70%, #2e6dcf 100%);
+  color: white;
+}
+
+
+.content-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.content-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  pointer-events: none;
+}
+
+.content-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.content-images {
+  display: flex;
+  gap: 15px;
 }
 
 
 
 /* -------------------- MEDIA QUERIES -------------------- */
- @media (max-width: 1100px) {
+@media (max-width: 1100px) {
     .btn {
         position: absolute;
-        top:150px ;
+        top: 150px;
         left: 10%;
     }
 
@@ -295,10 +359,11 @@ h1:hover {
         font-size: 1.5rem;
     }
 }
+
 @media (max-width: 992px) {
     .btn {
         position: absolute;
-        top:150px ;
+        top: 150px;
         left: 10%;
     }
 
@@ -312,8 +377,7 @@ h1:hover {
 
 @media (max-width: 768px) {
     nav {
-        flex-direction:row
-        gap: 10px;
+        flex-direction: row gap: 10px;
     }
 
     nav h1 {
@@ -350,7 +414,8 @@ h1:hover {
 
     .btn,
     .btn-text {
-        position: static; /* no overlap for very small screens */
+        position: static;
+        /* no overlap for very small screens */
         display: block;
         margin: 10px auto;
         text-align: center;
@@ -364,15 +429,21 @@ h1:hover {
         height: 200px;
     }
 }
-    
+
 @media (max-width: 344px) {
     .last {
-        display: flex;               /* make sure flex is active */
-        flex-direction: row;         /* stay in a row */
-        justify-content: center;     /* center horizontally */
-        align-items: center;         /* center vertically */
-        text-align: center;          /* center text */
-        gap: 5px;                     /* small space between items */
+        display: flex;
+        /* make sure flex is active */
+        flex-direction: row;
+        /* stay in a row */
+        justify-content: center;
+        /* center horizontally */
+        align-items: center;
+        /* center vertically */
+        text-align: center;
+        /* center text */
+        gap: 5px;
+        /* small space between items */
     }
 }
 
@@ -380,25 +451,33 @@ h1:hover {
 
 @media (max-width: 992px) {
     .card {
-        width: 45%; /* two per row */
+        width: 45%;
+        /* two per row */
     }
 }
 
 /* Large mobile */
 @media (max-width: 768px) {
     .card {
-        width: 90%; /* one per row */
+        width: 90%;
+        /* one per row */
     }
+
     .heading {
         left: 0;
         text-align: center;
     }
+
     .btn-see {
-        position: relative; /* make absolute positioning relative to container */
-        text-align: center; /* center button */
+        position: relative;
+        /* make absolute positioning relative to container */
+        text-align: center;
+        /* center button */
     }
+
     .btn-see button {
-        position: relative; /* still allows offsets inside container */
+        position: relative;
+        /* still allows offsets inside container */
         top: 0;
         right: 0;
         margin-top: 20px;
@@ -411,32 +490,43 @@ h1:hover {
 /* Small mobile */
 @media (max-width: 576px) {
     .card {
-        width: 100%; /* full width */
+        width: 100%;
+        /* full width */
     }
+
     /* .btn-see button {
         position: static; /* remove absolute */
-        display: block;
-        margin: 10px auto;
-    } */
-    .tag img {
-        width: 20px; /* shrink logos */
-        height: auto;
-    }
-    h2 {
-        font-size: 1rem;
-    }
+    display: block;
+    margin: 10px auto;
 }
- 
+
+*/ .tag img {
+    width: 20px;
+    /* shrink logos */
+    height: auto;
+}
+
+h2 {
+    font-size: 1rem;
+}
+}
+
 @media (max-width: 344px) {
     .btn {
-        width: 80%; /* make button wider */
-        left: 10%; /* center it */
+        width: 80%;
+        /* make button wider */
+        left: 10%;
+        /* center it */
     }
+
     .btn-text {
         left: 10%;
-        font-size: 1.2rem; /* larger text for readability */
+        font-size: 1.2rem;
+        /* larger text for readability */
     }
+
     .last img {
-        height: 40px; /* smaller images */
+        height: 40px;
+        /* smaller images */
     }
 }
