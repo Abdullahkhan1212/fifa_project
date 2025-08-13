@@ -1,4 +1,4 @@
-/* -------------------- GENERAL -------------------- */
+-------------------- GENERAL --------------------
 body {
     margin: 0;
     padding: 0;
@@ -11,7 +11,8 @@ body {
     box-sizing: border-box;
 }
 
-html,body {
+body
+ {
     overflow-x: hidden;
 }
 
@@ -308,39 +309,113 @@ h2 {
 
 
 .contain {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 30px;
-  border-radius: 10px;
-  
-
-  /* Gradient background sampled from your screenshot */
-  background: linear-gradient(135deg, #0d1234 0%, #152a64 40%, #1d4da3 70%, #2e6dcf 100%);
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    /* Gradient background sampled from your screenshot */
+    background: linear-gradient(135deg, #0d1234 0%, #152a64 40%, #1d4da3 70%, #2e6dcf 100%);
+    color: white;
 }
 
 
 .content-text {
-  flex: 1;
-  padding-right: 20px;
+    flex: 1;
+    padding-right: 20px;
 }
 
 .content-text h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  pointer-events: none;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    pointer-events: none;
 }
 
 .content-text p {
-  font-size: 1rem;
-  line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .content-images {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
+
+ /* crousel two images  */
+    .carousel-track-container {
+      position: relative;
+      overflow: hidden;
+      width: 90%;
+      margin: auto;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .carousel-slide {
+      flex: 0 0 calc(50% - 10px);
+      box-sizing: border-box;
+      background: green;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      display: block;
+    }
+
+    .carousel-slide p {
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .text-slide {
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-slide div {
+      max-width: 250px;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 5px 10px;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .prev {
+      left: 0;
+    }
+    .next {
+      right: 0;
+    }
+
+    .carousel-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .container{
+      background-color: aqua !important;
+      padding: 10px;
+      width: 100% !important;
+       max-width: 100% !important; 
+    }
 
 
 
