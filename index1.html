@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UEFA Style Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    footer {
+      background-color: #083b6f; /* Dark Blue */
+      color: white;
+      padding: 40px 80px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-left {
+      display: flex;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h4 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      color: #b0c6de;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #b0c6de;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .language {
+      font-size: 14px;
+      font-weight: bold;
+      color: #b0c6de;
+    }
+
+    .lang-select select {
+      background: #0c4a7f;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .social {
+      font-size: 14px;
+      font-weight: bold;
+      color: #b0c6de;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      background: #1f5a92;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #296dac;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .footer-left {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <footer>
+    <div class="footer-container">
+
+      <!-- Left Side -->
+      <div class="footer-left">
+        <div class="footer-col">
+          <h4>UEFA.com</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">National associations</a></li>
+            <li><a href="#">Running competitions</a></li>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">News & media</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">UEFA.tv</a></li>
+            <li><a href="#">Match calendar</a></li>
+            <li><a href="#">Rankings</a></li>
+            <li><a href="#">Tickets/Hospitality</a></li>
+            <li><a href="#">UEFA National Team Football store</a></li>
+            <li><a href="#">UEFA Men’s Club Competitions store</a></li>
+            <li><a href="#">UEFA Men’s Club Competitions Memorabilia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="#">MyUEFA</a></li>
+            <li><a href="#">UC3</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="footer-right">
+        <div>
+          <div class="language">Change Language</div>
+          <div class="lang-select">
+            <select>
+              <option>English</option>
+              <option>French</option>
+              <option>Spanish</option>
+              <option>German</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div class="social">Follow us on</div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
